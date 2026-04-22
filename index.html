@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xinn App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <section id="splashScreen" class="screen splash-screen active">
+    <div class="splash-logo-wrap">
+      <img src="assets/avatar.gif" alt="Owner Xinn" class="splash-avatar">
+      <h1 class="glow-title">OWNER XINN</h1>
+      <p class="glow-sub">Initializing premium mobile dashboard...</p>
+    </div>
+  </section>
+
+  <section id="loginScreen" class="screen login-screen">
+    <div class="auth-card glass">
+      <img src="assets/avatar.gif" alt="Owner Xinn" class="profile-gif">
+      <h2 class="panel-title">XINN LOGIN</h2>
+      <p class="panel-subtitle">Masuk untuk membuka panel owner.</p>
+
+      <label class="input-label">Username</label>
+      <input id="username" class="neon-input" type="text" placeholder="Masukkan username" />
+
+      <label class="input-label">Password</label>
+      <div class="password-wrap">
+        <input id="password" class="neon-input" type="password" placeholder="Masukkan password" />
+        <button id="togglePassword" class="mini-btn" type="button">👁</button>
+      </div>
+
+      <button id="loginBtn" class="primary-btn" type="button">MASUK SEKARANG</button>
+      <p id="loginMsg" class="login-msg"></p>
+
+      <div class="hint-box">
+        <span>Demo login:</span>
+        <strong>xinn / 123</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="appScreen" class="screen app-screen">
+    <header class="topbar glass">
+      <button class="icon-btn" type="button">☰</button>
+      <div class="brand-text">Xinn Owner Panel</div>
+      <button id="soundToggle" class="icon-btn" type="button">🔊</button>
+    </header>
+
+    <main class="app-shell">
+      <section class="hero-card glass">
+        <div class="hero-top">
+          <img src="assets/avatar.gif" alt="Owner Xinn" class="hero-avatar">
+          <div>
+            <h2 class="hero-name">OWNER XINN</h2>
+            <div class="hero-badges">
+              <span class="badge badge-primary">OWNER</span>
+              <span class="badge">EXP 2030</span>
+            </div>
+          </div>
+        </div>
+        <img src="assets/banner.gif" alt="Banner bergerak" class="hero-banner">
+      </section>
+
+      <section class="info-card glass">
+        <h3 class="card-title">Account Information</h3>
+        <div class="info-row"><span>Username</span><strong>XINN</strong></div>
+        <div class="info-row"><span>Status</span><strong class="green">OWNER</strong></div>
+        <div class="info-row"><span>Server</span><strong class="green">ONLINE</strong></div>
+        <div class="info-row"><span>Sending</span><strong>6</strong></div>
+        <div class="info-row"><span>Sender</span><strong>1</strong></div>
+      </section>
+
+      <section class="feature-grid">
+        <div class="feature-box glass">
+          <h4>WhatsApp Tools</h4>
+          <p>Panel notifikasi dan pengiriman cepat.</p>
+        </div>
+        <div class="feature-box glass">
+          <h4>Neon Music</h4>
+          <p>Suara latar aktif dan klik interaktif.</p>
+        </div>
+        <div class="feature-box glass">
+          <h4>Splash App</h4>
+          <p>Tampilan pembuka seperti aplikasi premium.</p>
+        </div>
+        <div class="feature-box glass">
+          <h4>Animated Assets</h4>
+          <p>Banner bergerak dan avatar GIF lokal.</p>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav glass">
+      <button class="nav-btn active" type="button">Home</button>
+      <button class="nav-btn" type="button">Tools</button>
+      <button class="nav-btn" type="button">Profile</button>
+    </nav>
+  </section>
+
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/bg-loop.wav" type="audio/wav">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
